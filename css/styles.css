@@ -1,0 +1,54 @@
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+header.jumbotron {
+    background-image: url('../img/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.navbar {
+    margin-bottom: 20px;
+    background-color: #26293B;
+}
+.navbar-brand span {
+    color: orange;
+}
+.navbar-nav .nav-link {
+    color: white !important;
+}
+.navbar-toggler {
+    border-color: white; /* Border color of the toggler button */
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    /* This SVG replaces the default one with a white-colored icon */
+}
+
+/* Navbar Link Colors */
+.navbar-nav .nav-link {
+    color: white !important;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Change Background and Text Color on Hover */
+.navbar-nav .nav-item:hover {
+    background-color: #26293B;
+    color: #86660d; /* Darker shade of your navbar color */
+}
+
+.navbar-nav .nav-item:hover .nav-link {
+    color: #e6aa05 !important; /* Light gray text color on hover */
+}
+
+
+footer {
+    margin-top: 800px;
+    background-color: #26293B;
+}
+#footer-h5{
+    color: orange;
+}

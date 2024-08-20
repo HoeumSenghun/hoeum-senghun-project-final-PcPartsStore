@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC Parts Store</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div w3-include-html="components/navbar.html"></div>
+
+    <!-- Banner Section -->
+    <header class="jumbotron text-center">
+        <h1 class="display-4">Welcome to PC Parts Store</h1>
+        <p class="lead">Find the best components for your custom PC builds.</p>
+        <a class="btn btn-primary btn-lg" href="build.html" role="button">Start Building</a>
+    </header>
+
+    <!-- Featured Products Section -->
+    <section class="container my-5">
+        <h2 class="text-center">Featured Products</h2>
+        <div class="row">
+            <!-- Add your product cards here -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div w3-include-html="components/footer.html"></div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        includeHTML();
+    </script>
+</body>
+</html>
