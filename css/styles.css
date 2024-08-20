@@ -2,6 +2,7 @@ body {
     font-family: 'Arial', sans-serif;
     flex-wrap: wrap;
     background-color: #ddd;
+    margin-top: 71px;
 }
 
 header.jumbotron {
@@ -13,8 +14,10 @@ header.jumbotron {
 
 .sticky-top {
     position: -webkit-sticky; /* For Safari */
-    position: sticky;
+    position: fixed;
+    width: 100%;
     top: 0;
+    left: 0;
     z-index: 1030; /* Make sure it appears above other content */
 }
 
@@ -66,8 +69,11 @@ header.jumbotron {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
     overflow: hidden;
-}
 
+}
+.container-card{
+    display: flex;
+}
 .card:hover {
     transform: translateY(-10px);
 }
