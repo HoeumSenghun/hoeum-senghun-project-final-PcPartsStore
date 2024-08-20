@@ -9,16 +9,26 @@ header.jumbotron {
     color: white;
 }
 
+.sticky-top {
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 0;
+    z-index: 1030; /* Make sure it appears above other content */
+}
+
 .navbar {
     margin-bottom: 20px;
     background-color: #26293B;
 }
+
 .navbar-brand span {
     color: orange;
 }
+
 .navbar-nav .nav-link {
     color: white !important;
 }
+
 .navbar-toggler {
     border-color: white; /* Border color of the toggler button */
 }
@@ -44,11 +54,11 @@ header.jumbotron {
     color: #e6aa05 !important; /* Light gray text color on hover */
 }
 
-
 footer {
     margin-top: 800px;
     background-color: #26293B;
 }
-#footer-h5{
+
+#footer-h5 {
     color: orange;
 }
