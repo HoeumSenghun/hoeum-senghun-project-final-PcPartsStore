@@ -1,5 +1,6 @@
 body {
     font-family: 'Arial', sans-serif;
+    flex-wrap: wrap;
 }
 
 header.jumbotron {
@@ -52,6 +53,78 @@ header.jumbotron {
 
 .navbar-nav .nav-item:hover .nav-link {
     color: #e6aa05 !important; /* Light gray text color on hover */
+}
+
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 250px;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-image img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-details {
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0;
+}
+
+.card-price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+}
+
+.card-footer {
+    padding: 10px 15px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ddd;
+    text-align: right;
+}
+
+.comments {
+    font-size: 14px;
+    color: #777;
+}
+
+.top-bar {
+    width: 100%;
+    background-color: #4a4a8a;
+    padding: 20px 0;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.top-bar h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
 }
 
 footer {
