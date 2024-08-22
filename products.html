@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,55 +8,498 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
 
     <!-- Navbar -->
     <div w3-include-html="components/navbar.html"></div>
 
-    <section class="container my-5">
+    <section class="container-fluid p-0">
         <h2 class="product text-center">CPUs</h2>
         <div class="row">
-            <!-- Add product listings here -->
+            <div class="product-list-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Core Count</th>
+                            <th>Performance Core Clock</th>
+                            <th>Performance Core Boost Clock</th>
+                            <th>TDP</th>
+                            <th>Integrated Graphics</th>
+                            <th>SMT</th>
+                            <th>Rating</th>
+                            <th>Price</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Name"><img src="./img/products/2505503-ryzen-7-7800x3d.avif"
+                                    alt="AMD Ryzen 7 7800X3D"> AMD Ryzen 7 7800X3D</td>
+                            <td data-label="Core Count">8</td>
+                            <td data-label="Performance Core Clock">4.2 GHz</td>
+                            <td data-label="Performance Core Boost Clock">5 GHz</td>
+                            <td data-label="TDP">120 W</td>
+                            <td data-label="Integrated Graphics">Radeon</td>
+                            <td data-label="SMT">Yes</td>
+                            <td data-label="Rating">⭐⭐⭐⭐⭐ (348)</td>
+                            <td data-label="Price">$366.80</td>
+                            <td data-label="Action"><button class="btn-warning"
+                                    onclick="addToCart('AMD Ryzen 7 7800X3D', 366.80)">+Add</button></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Name"><img src="./img/products/AMD Ryzen 5 7600X.jpg"
+                                    alt="AMD Ryzen 5 7600X"> AMD Ryzen 5 7600X</td>
+                            <td data-label="Core Count">6</td>
+                            <td data-label="Performance Core Clock">4.7 GHz</td>
+                            <td data-label="Performance Core Boost Clock">5.3 GHz</td>
+                            <td data-label="TDP">105 W</td>
+                            <td data-label="Integrated Graphics">Radeon</td>
+                            <td data-label="SMT">Yes</td>
+                            <td data-label="Rating">⭐⭐⭐⭐⭐ (168)</td>
+                            <td data-label="Price">$194.99</td>
+                            <td data-label="Action"><button class="btn-warning">+Add</button></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Name"><img src="./img/products/Intel Core i5 12400F-500x500.jpg"
+                                    alt="Intel Core i5-12400F"> Intel Core i5-12400F</td>
+                            <td data-label="Core Count">6</td>
+                            <td data-label="Performance Core Clock">2.5 GHz</td>
+                            <td data-label="Performance Core Boost Clock">4.4 GHz</td>
+                            <td data-label="TDP">65 W</td>
+                            <td data-label="Integrated Graphics">None</td>
+                            <td data-label="SMT">Yes</td>
+                            <td data-label="Rating">⭐⭐⭐⭐⭐ (82)</td>
+                            <td data-label="Price">$109.00</td>
+                            <td data-label="Action"><button class="btn-warning">+Add</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
+
         <h2 class="product text-center">CPU Coolers</h2>
         <div class="row">
-            <!-- Add product listings here -->
+            <div class="product-list-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Fan Size</th>
+                            <th>Fan Speed</th>
+                            <th>Noise Level</th>
+                            <th>TDP Support</th>
+                            <th>Rating</th>
+                            <th>Price</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Name"><img src="./img/products/cooler-master-hyper-212-black-cpu-air.jpg"
+                                    alt="Cooler Master Hyper 212"> Cooler Master Hyper 212</td>
+                            <td data-label="Fan Size">120mm</td>
+                            <td data-label="Fan Speed">600-2000 RPM</td>
+                            <td data-label="Noise Level">26 dBA</td>
+                            <td data-label="TDP Support">150W</td>
+                            <td data-label="Rating">⭐⭐⭐⭐⭐ (1,200)</td>
+                            <td data-label="Price">$39.99</td>
+                            <td data-label="Action"><button class="btn-warning">+Add</button></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Name"><img src="./img/products/Noctua NH-D15.jpg" alt="Noctua NH-D15">
+                                Noctua NH-D15</td>
+                            <td data-label="Fan Size">140mm</td>
+                            <td data-label="Fan Speed">300-1500 RPM</td>
+                            <td data-label="Noise Level">24.6 dBA</td>
+                            <td data-label="TDP Support">220W</td>
+                            <td data-label="Rating">⭐⭐⭐⭐⭐ (700)</td>
+                            <td data-label="Price">$89.95</td>
+                            <td data-label="Action"><button class="btn-warning">+Add</button></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Name"><img src="./img/products/Corsair H100i RGB Platinum.jpg"
+                                    alt="Corsair H100i RGB Platinum"> Corsair H100i RGB Platinum</td>
+                            <td data-label="Fan Size">240mm (Dual Fan)</td>
+                            <td data-label="Fan Speed">400-2400 RPM</td>
+                            <td data-label="Noise Level">37 dBA</td>
+                            <td data-label="TDP Support">250W</td>
+                            <td data-label="Rating">⭐⭐⭐⭐ (500)</td>
+                            <td data-label="Price">$139.99</td>
+                            <td data-label="Action"><button class="btn-warning">+Add</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
+
         <h2 class="product text-center">Motherboards</h2>
         <div class="row">
-            <!-- Add product listings here -->
+            <div class="product-list-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Form Factor</th>
+                            <th>Chipset</th>
+                            <th>Socket Type</th>
+                            <th>Memory Support</th>
+                            <th>PCIe Slots</th>
+                            <th>Rating</th>
+                            <th>Price</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Name"><img src="./img/products/ASUS ROG Strix B550-F.png"
+                                    alt="ASUS ROG Strix B550-F"> ASUS ROG Strix B550-F</td>
+                            <td data-label="Form Factor">ATX</td>
+                            <td data-label="Chipset">AMD B550</td>
+                            <td data-label="Socket Type">AM4</td>
+                            <td data-label="Memory Support">DDR4, up to 128GB</td>
+                            <td data-label="PCIe Slots">PCIe 4.0 x16, PCIe 3.0 x16, PCIe 3.0 x1</td>
+                            <td data-label="Rating">⭐⭐⭐⭐⭐ (1,500)</td>
+                            <td data-label="Price">$189.99</td>
+                            <td data-label="Action"><button class="btn-warning">+Add</button></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Name"><img src="./img/products/MSI MAG Z490 Tomahawk.png"
+                                    alt="MSI MAG Z490 Tomahawk"> MSI MAG Z490 Tomahawk</td>
+                            <td data-label="Form Factor">ATX</td>
+                            <td data-label="Chipset">Intel Z490</td>
+                            <td data-label="Socket Type">LGA 1200</td>
+                            <td data-label="Memory Support">DDR4, up to 128GB</td>
+                            <td data-label="PCIe Slots">PCIe 3.0 x16, PCIe 3.0 x1</td>
+                            <td data-label="Rating">⭐⭐⭐⭐ (900)</td>
+                            <td data-label="Price">$159.99</td>
+                            <td data-label="Action"><button class="btn-warning">+Add</button></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Name"><img src="./img/products/Gigabyte X570 AORUS Elite.jpg"
+                                    alt="Gigabyte X570 AORUS Elite"> Gigabyte X570 AORUS Elite</td>
+                            <td data-label="Form Factor">ATX</td>
+                            <td data-label="Chipset">AMD X570</td>
+                            <td data-label="Socket Type">AM4</td>
+                            <td data-label="Memory Support">DDR4, up to 128GB</td>
+                            <td data-label="PCIe Slots">PCIe 4.0 x16, PCIe 3.0 x16, PCIe 3.0 x1</td>
+                            <td data-label="Rating">⭐⭐⭐⭐⭐ (1,200)</td>
+                            <td data-label="Price">$169.99</td>
+                            <td data-label="Action"><button class="btn-warning">+Add</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
-        <h2 class="product text-center">Memmory</h2>
+
+        <h2 class="product text-center">Memory</h2>
         <div class="row">
-            <!-- Add product listings here -->
+            <div class="product-list-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Memory Type</th>
+                            <th>Memory Size</th>
+                            <th>Speed</th>
+                            <th>CAS Latency</th>
+                            <th>Voltage</th>
+                            <th>Rating</th>
+                            <th>Price</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Name"><img src="./img/products//Corsair Vengeance LPX.jpg"
+                                    alt="Corsair Vengeance LPX"> Corsair Vengeance LPX</td>
+                            <td data-label="Memory Type">DDR4</td>
+                            <td data-label="Memory Size">16GB (2 x 8GB)</td>
+                            <td data-label="Speed">3200 MHz</td>
+                            <td data-label="CAS Latency">16</td>
+                            <td data-label="Voltage">1.35V</td>
+                            <td data-label="Rating">⭐⭐⭐⭐⭐ (4,000)</td>
+                            <td data-label="Price">$79.99</td>
+                            <td data-label="Action"><button class="btn-warning">+Add</button></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Name"><img src="./img/products/G.Skill Ripjaws V.jpg"
+                                    alt="G.Skill Ripjaws V"> G.Skill Ripjaws V</td>
+                            <td data-label="Memory Type">DDR4</td>
+                            <td data-label="Memory Size">16GB (2 x 8GB)</td>
+                            <td data-label="Speed">3600 MHz</td>
+                            <td data-label="CAS Latency">18</td>
+                            <td data-label="Voltage">1.35V</td>
+                            <td data-label="Rating">⭐⭐⭐⭐⭐ (3,500)</td>
+                            <td data-label="Price">$89.99</td>
+                            <td data-label="Action"><button class="btn-warning">+Add</button></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Name"><img src="./img/products/Kingston HyperX Fury.jpg"
+                                    alt="Kingston HyperX Fury"> Kingston HyperX Fury</td>
+                            <td data-label="Memory Type">DDR4</td>
+                            <td data-label="Memory Size">16GB (1 x 16GB)</td>
+                            <td data-label="Speed">2666 MHz</td>
+                            <td data-label="CAS Latency">15</td>
+                            <td data-label="Voltage">1.2V</td>
+                            <td data-label="Rating">⭐⭐⭐⭐ (2,200)</td>
+                            <td data-label="Price">$74.99</td>
+                            <td data-label="Action"><button class="btn-warning">+Add</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
+
         <h2 class="product text-center">Storage</h2>
         <div class="row">
-            <!-- Add product listings here -->
+            <div class="product-list-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Type</th>
+                            <th>Capacity</th>
+                            <th>Read Speed</th>
+                            <th>Write Speed</th>
+                            <th>Rating</th>
+                            <th>Price</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Name"><img src="./img/products/Samsung 970 EVO Plus.jpg"
+                                    alt="Samsung 970 Evo"> Samsung 970 Evo</td>
+                            <td data-label="Type">SSD</td>
+                            <td data-label="Capacity">1TB</td>
+                            <td data-label="Read Speed">3500 MB/s</td>
+                            <td data-label="Write Speed">3300 MB/s</td>
+                            <td data-label="Rating">⭐⭐⭐⭐⭐ (6,000)</td>
+                            <td data-label="Price">$129.99</td>
+                            <td data-label="Action"><button class="btn-warning">+Add</button></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Name"><img src="./img/products/Western Digital Black SN750.png"
+                                    alt="Western Digital Black SN750"> Western Digital Black SN750</td>
+                            <td data-label="Type">SSD</td>
+                            <td data-label="Capacity">1TB</td>
+                            <td data-label="Read Speed">3400 MB/s</td>
+                            <td data-label="Write Speed">3000 MB/s</td>
+                            <td data-label="Rating">⭐⭐⭐⭐⭐ (5,500)</td>
+                            <td data-label="Price">$119.99</td>
+                            <td data-label="Action"><button class="btn-warning">+Add</button></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Name"><img src="./img/products/Crucial MX500.jpg" alt="Crucial MX500">
+                                Crucial MX500</td>
+                            <td data-label="Type">SSD</td>
+                            <td data-label="Capacity">1TB</td>
+                            <td data-label="Read Speed">560 MB/s</td>
+                            <td data-label="Write Speed">510 MB/s</td>
+                            <td data-label="Rating">⭐⭐⭐⭐ (4,500)</td>
+                            <td data-label="Price">$94.99</td>
+                            <td data-label="Action"><button class="btn-warning">+Add</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
+
         <h2 class="product text-center">Video Cards</h2>
         <div class="row">
-            <!-- Add product listings here -->
+            <div class="product-list-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>GPU Model</th>
+                            <th>Memory</th>
+                            <th>Core Clock</th>
+                            <th>Boost Clock</th>
+                            <th>Power Consumption</th>
+                            <th>Rating</th>
+                            <th>Price</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Name"><img src="./img/products/NVIDIA GeForce RTX 3080.jpg"
+                                    alt="MSI GeForce RTX 3080"> MSI GeForce RTX 3080</td>
+                            <td data-label="GPU Model">NVIDIA GeForce RTX 3080</td>
+                            <td data-label="Memory">10GB GDDR6X</td>
+                            <td data-label="Core Clock">1440 MHz</td>
+                            <td data-label="Boost Clock">1710 MHz</td>
+                            <td data-label="Power Consumption">320W</td>
+                            <td data-label="Rating">⭐⭐⭐⭐⭐ (3,000)</td>
+                            <td data-label="Price">$699.99</td>
+                            <td data-label="Action"><button class="btn-warning">+Add</button></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Name"><img src="./img/products/AMD Radeon RX 6800 XT.png"
+                                    alt="Gigabyte Radeon RX 6700 XT"> Gigabyte Radeon RX 6700 XT</td>
+                            <td data-label="GPU Model">AMD Radeon RX 6700 XT</td>
+                            <td data-label="Memory">12GB GDDR6</td>
+                            <td data-label="Core Clock">2321 MHz</td>
+                            <td data-label="Boost Clock">2581 MHz</td>
+                            <td data-label="Power Consumption">230W</td>
+                            <td data-label="Rating">⭐⭐⭐⭐⭐ (2,500)</td>
+                            <td data-label="Price">$479.99</td>
+                            <td data-label="Action"><button class="btn-warning">+Add</button></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Name"><img src="./img/products/ASUS TUF Gaming GeForce GTX 1660 Super.jpg"
+                                    alt="ASUS TUF Gaming GeForce GTX 1660 Super"> ASUS TUF Gaming GeForce GTX 1660 Super
+                            </td>
+                            <td data-label="GPU Model">NVIDIA GeForce GTX 1660 Super</td>
+                            <td data-label="Memory">6GB GDDR6</td>
+                            <td data-label="Core Clock">1530 MHz</td>
+                            <td data-label="Boost Clock">1785 MHz</td>
+                            <td data-label="Power Consumption">125W</td>
+                            <td data-label="Rating">⭐⭐⭐⭐ (1,800)</td>
+                            <td data-label="Price">$239.99</td>
+                            <td data-label="Action"><button class="btn-warning">+Add</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
-        <h2 class="product text-center">Power Supplies</h2>
+
+        <h2 class="product text-center">Power Supply</h2>
         <div class="row">
-            <!-- Add product listings here -->
+            <div class="product-list-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Form Factor</th>
+                            <th>Wattage</th>
+                            <th>Efficiency</th>
+                            <th>Modularity</th>
+                            <th>Rating</th>
+                            <th>Price</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Name"><img src="./img/products/Corsair RM750x.jpg" alt="Corsair RM750x">
+                                Corsair RM750x</td>
+                            <td data-label="Form Factor">ATX</td>
+                            <td data-label="Wattage">750W</td>
+                            <td data-label="Efficiency">80+ Gold</td>
+                            <td data-label="Modularity">Fully Modular</td>
+                            <td data-label="Rating">⭐⭐⭐⭐⭐ (3,500)</td>
+                            <td data-label="Price">$129.99</td>
+                            <td data-label="Action"><button class="btn-warning">+Add</button></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Name"><img src="./img/products/EVGA SuperNOVA 650 G5.png"
+                                    alt="EVGA SuperNOVA 650 G5"> EVGA SuperNOVA 650 G5</td>
+                            <td data-label="Form Factor">ATX</td>
+                            <td data-label="Wattage">650W</td>
+                            <td data-label="Efficiency">80+ Gold</td>
+                            <td data-label="Modularity">Fully Modular</td>
+                            <td data-label="Rating">⭐⭐⭐⭐⭐ (2,800)</td>
+                            <td data-label="Price">$109.99</td>
+                            <td data-label="Action"><button class="btn-warning">+Add</button></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Name"><img src="./img/products/Cooler Master MasterWatt 550.jpg"
+                                    alt="Cooler Master MasterWatt 550"> Cooler Master MasterWatt 550</td>
+                            <td data-label="Form Factor">ATX</td>
+                            <td data-label="Wattage">550W</td>
+                            <td data-label="Efficiency">80+ Bronze</td>
+                            <td data-label="Modularity">Semi-Modular</td>
+                            <td data-label="Rating">⭐⭐⭐⭐ (1,500)</td>
+                            <td data-label="Price">$79.99</td>
+                            <td data-label="Action"><button class="btn-warning">+Add</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
-        <h2 class="product text-center">Cases</h2>
+
+        <h2 class="product text-center">Case</h2>
         <div class="row">
-            <!-- Add product listings here -->
+            <div class="product-list-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Form Factor</th>
+                            <th>Type</th>
+                            <th>Material</th>
+                            <th>Cooling</th>
+                            <th>Rating</th>
+                            <th>Price</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Name"><img src="./img/products/Fractal Design Meshify C.jpg"
+                                    alt="Fractal Design Meshify C"> Fractal Design Meshify C</td>
+                            <td data-label="Form Factor">ATX</td>
+                            <td data-label="Type">Mid Tower</td>
+                            <td data-label="Material">Steel, Tempered Glass</td>
+                            <td data-label="Cooling">2 x 120mm Fans (included)</td>
+                            <td data-label="Rating">⭐⭐⭐⭐⭐ (2,200)</td>
+                            <td data-label="Price">$99.99</td>
+                            <td data-label="Action"><button class="btn-warning">+Add</button></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Name"><img src="./img/products/NZXT H510.jpg " alt="NZXT H510"> NZXT H510
+                            </td>
+                            <td data-label="Form Factor">ATX</td>
+                            <td data-label="Type">Mid Tower</td>
+                            <td data-label="Material">Steel, Tempered Glass</td>
+                            <td data-label="Cooling">2 x 120mm Fans (included)</td>
+                            <td data-label="Rating">⭐⭐⭐⭐⭐ (3,000)</td>
+                            <td data-label="Price">$69.99</td>
+                            <td data-label="Action"><button class="btn-warning">+Add</button></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Name"><img src="./img/products/Phanteks P300A.jpg"
+                                    alt="Phanteks Eclipse P300A"> Phanteks Eclipse P300A</td>
+                            <td data-label="Form Factor">ATX</td>
+                            <td data-label="Type">Mid Tower</td>
+                            <td data-label="Material">Steel</td>
+                            <td data-label="Cooling">1 x 120mm Fan (included)</td>
+                            <td data-label="Rating">⭐⭐⭐⭐ (1,700)</td>
+                            <td data-label="Price">$59.99</td>
+                            <td data-label="Action"><button class="btn-warning">+Add</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <div w3-include-html="components/footer.html"></div>
+    
+        
+    </section>
+ 
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="js/script.js"></script>
-    <script>
-        includeHTML();
-    </script>
 </body>
+
+</html>
+
+
+<!-- Footer -->
+<div w3-include-html="components/footer.html"></div>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="js/script.js"></script>
+<script>
+    includeHTML();
+</script>
+</body>
+
 </html>

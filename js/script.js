@@ -24,3 +24,24 @@ function includeHTML() {
     }
   }
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('button').forEach(button => {
+      button.addEventListener('click', function () {
+          const selectElement = this.nextElementSibling;
+          selectElement.classList.toggle('hidden');
+      });
+  });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Example: Add event listeners to the build guide items
+  document.querySelectorAll('.guide').forEach(guide => {
+      guide.addEventListener('click', () => {
+          alert(`You clicked on ${guide.querySelector('h3').textContent}`);
+      });
+  });
+});
+
+
+

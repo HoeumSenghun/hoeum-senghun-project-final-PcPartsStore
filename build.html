@@ -12,9 +12,96 @@
     <!-- Navbar -->
     <div w3-include-html="components/navbar.html"></div>
 
-    <section class="container my-5">
-        <h2 class="chose-part text-center">Choose Your Parts</h2>
+    <section class="container-fluid p-0 ">
+        <div class=" bg-dark"><h2 class="chose-part text-center">Choose Your Parts</h2></div>
         <!-- Add build components UI here -->
+        <div class="container-b">
+            <form id="pc-builder-form">
+                <!-- CPU -->
+                <div class="component">
+                    <label for="cpu">CPU</label>
+                    <button class="btn-warning" type="button" id="choose-cpu">+ Choose A CPU</button>
+                    <select id="cpu" name="cpu" class="hidden">
+                        <option value="intel-i5">Intel i5</option>
+                        <option value="intel-i7">Intel i7</option>
+                        <option value="amd-ryzen-5">AMD Ryzen 5</option>
+                        <option value="amd-ryzen-7">AMD Ryzen 7</option>
+                    </select>
+                </div>
+                <!-- CPU Cooler -->
+                <div class="component">
+                    <label for="cpu-cooler">CPU Cooler</label>
+                    <button class="btn-warning" type="button" id="choose-cpu-cooler">+ Choose A CPU Cooler</button>
+                    <select id="cpu-cooler" name="cpu-cooler" class="hidden">
+                        <option value="cooler-master">Cooler Master</option>
+                        <option value="noctua">Noctua</option>
+                        <option value="corsair">Corsair</option>
+                    </select>
+                </div>
+                <!-- Motherboard -->
+                <div class="component">
+                    <label for="motherboard">Motherboard</label>
+                    <button class="btn-warning" type="button" id="choose-motherboard">+ Choose A Motherboard</button>
+                    <select id="motherboard" name="motherboard" class="hidden">
+                        <option value="asus-rog">ASUS ROG</option>
+                        <option value="msi-tomahawk">MSI Tomahawk</option>
+                        <option value="gigabyte-aorus">Gigabyte AORUS</option>
+                    </select>
+                </div>
+                <!-- Memory -->
+            <div class="component">
+                <label for="memory">Memory</label>
+                <button class="btn-warning" type="button" id="choose-memory">+ Choose Memory</button>
+                <select id="memory" name="memory" class="hidden">
+                    <option value="corsair-16gb">Corsair 16GB</option>
+                    <option value="gskill-16gb">G.Skill 16GB</option>
+                    <option value="kingston-32gb">Kingston 32GB</option>
+                </select>
+            </div>
+            <!-- Storage -->
+            <div class="component">
+                <label for="storage">Storage</label>
+                <button class="btn-warning" type="button" id="choose-storage">+ Choose Storage</button>
+                <select id="storage" name="storage" class="hidden">
+                    <option value="samsung-1tb">Samsung 1TB SSD</option>
+                    <option value="wd-1tb">Western Digital 1TB HDD</option>
+                    <option value="seagate-2tb">Seagate 2TB HDD</option>
+                </select>
+            </div>
+            <!-- Video Card -->
+            <div class="component">
+                <label for="video-card">Video Card</label>
+                <button class="btn-warning" type="button" id="choose-video-card">+ Choose A Video Card</button>
+                <select id="video-card" name="video-card" class="hidden">
+                    <option value="nvidia-rtx-3060">NVIDIA RTX 3060</option>
+                    <option value="nvidia-rtx-3080">NVIDIA RTX 3080</option>
+                    <option value="amd-rx-6700xt">AMD RX 6700 XT</option>
+                </select>
+            </div>
+            <!-- Case -->
+            <div class="component">
+                <label for="case">Case</label>
+                <button class="btn-warning" type="button" id="choose-case">+ Choose A Case</button>
+                <select id="case" name="case" class="hidden">
+                    <option value="nzxt-h510">NZXT H510</option>
+                    <option value="corsair-4000d">Corsair 4000D</option>
+                    <option value="fractal-meshify-c">Fractal Meshify C</option>
+                </select>
+            </div>
+            <!-- Power Supply -->
+            <div class="component">
+                <label for="power-supply">Power Supply</label>
+                <button class="btn-warning" type="button" id="choose-power-supply">+ Choose A Power Supply</button>
+                <select id="power-supply" name="power-supply" class="hidden">
+                    <option value="corsair-650w">Corsair 650W</option>
+                    <option value="evga-750w">EVGA 750W</option>
+                    <option value="seasonic-850w">Seasonic 850W</option>
+                </select>
+            </div>
+
+
+            </form>
+        </div>
     </section>
 
     <!-- Footer -->
