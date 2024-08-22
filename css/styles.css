@@ -466,3 +466,8 @@ td:nth-child(9) {
 #footer-h5 {
     color: orange;
 }
+
+
+.hidden {
+    display: none;
+}
