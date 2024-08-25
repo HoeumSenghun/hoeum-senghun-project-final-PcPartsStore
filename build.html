@@ -6,6 +6,66 @@
     <title>Build Your PC</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .table-container {
+          margin: 20px;
+          padding: 20px;
+          border-radius: 5px;
+          background-color: white;
+        }
+  
+        .table-container table,
+        th,
+        td {
+          border: 1px solid black;
+        }
+  
+        .table-container table {
+          width: 100%;
+          border-collapse: collapse;
+          color: red;
+        }
+  
+        .table-container th {
+          height: 30px;
+        }
+  
+        .table-container td {
+          text-align: center;
+        }
+  
+        .button-edit {
+          background-color: green;
+          color: white;
+          border: 0px;
+          border-radius: 3px;
+        }
+  
+        .button-edit:hover {
+          background-color: greenyellow;
+        }
+  
+        .button-delete {
+          background-color: red;
+          color: white;
+          border: 0px;
+          border-radius: 3px;
+        }
+  
+        .button-delete:hover {
+          background-color: tomato;
+        }
+  
+        .table-container form {
+          border: 1px solid gray;
+          padding: 10px;
+          background-color: rgb(255, 187, 0);
+        }
+  
+        .table-container input {
+          width: 100%;
+        }
+      </style>
 </head>
 <body>
 
@@ -102,8 +162,26 @@
 
             </form>
         </div>
+        <div class=" bg-dark"><h2 class="chose-part text-center">Overview</h2></div>
     </section>
-
+    <div class="table-container">
+        <h2>List component</h2>
+        <form>
+            <label>Id</label>
+            <input id="id" /><br />
+            <label>Component</label>
+            <input id="compo" /><br />
+            <label>Selection</label>
+            <input id="selcet_compo" /><br />
+            <label>Shipping</label>
+            <input id="shipping"><br />
+            <label>Price</label>
+            <input id="price" />
+            <br />
+        </form>
+        <table id="table-photo"></table>
+      </div>
+      <script src="js/fetch-data.js"></script>
     <!-- Footer -->
     <div w3-include-html="components/footer.html"></div>
 
