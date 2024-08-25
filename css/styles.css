@@ -8,6 +8,8 @@ body {
     margin-top: 71px;
     background-color: #ddd;
     width: 100%;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 header.jumbotron {
@@ -18,7 +20,15 @@ header.jumbotron {
     height: 300px;
 }
 
-
+#button-top{
+    background-color: orange;
+    color: white;
+}
+#button-top:hover{
+    background-color: white;
+    color: orange;
+    transition: 0.3s;
+}
 
 .sticky-top {
     position: -webkit-sticky; /* For Safari */
@@ -306,7 +316,8 @@ select {
 }
 
 .view-builds-btn:hover {
-    background-color: #0056b3;
+    background-color: #ffffff;
+    color: rgb(228, 158, 27);
 }
 .builds-grid {
     display: flex;
@@ -467,7 +478,14 @@ td:nth-child(9) {
     color: orange;
 }
 
-
+.btn-sub{
+    color: white;
+    background-color:#e6aa05;
+}
+.btn-sub:hover{
+    background-color: white;
+    color: #e6aa05;
+}
 .hidden {
     display: none;
 }
