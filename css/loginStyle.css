@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@600;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -5,66 +7,77 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #0b0f17 0%, #111827 50%, #1a2234 100%);
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    padding: 1rem;
 }
 
 .login-container {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(255, 208, 0, 0.1);
-    width: 300px;
+    background-color: #1a2234;
+    border: 1px solid rgba(148, 163, 184, 0.12);
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    max-width: 360px;
     text-align: center;
 }
 
 h2 {
-    margin-bottom: 20px;
-    font-size: 24px;
-    color: #333;
+    margin-bottom: 1.5rem;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.35rem;
+    color: #f1f5f9;
 }
 
 .input-group {
-    margin-bottom: 15px;
+    margin-bottom: 1rem;
     text-align: left;
 }
 
 label {
     display: block;
-    margin-bottom: 5px;
-    color: #555;
+    margin-bottom: 0.35rem;
+    color: #94a3b8;
+    font-size: 0.875rem;
+    font-weight: 500;
 }
 
 input[type="text"], input[type="password"] {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
+    padding: 0.75rem 1rem;
+    background: #232d42;
+    border: 1px solid rgba(148, 163, 184, 0.12);
+    border-radius: 10px;
+    font-size: 0.95rem;
+    color: #f1f5f9;
 }
 
 input[type="text"]:focus, input[type="password"]:focus {
-    border-color: #ffd000;
+    border-color: #f59e0b;
     outline: none;
+    box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.25);
 }
 
 .login-btn {
     width: 100%;
-    padding: 10px;
-    background-color: #ffd000;
-    color: #fff;
+    padding: 0.75rem;
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    color: #0b0f17;
     border: none;
-    border-radius: 5px;
-    font-size: 16px;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-weight: 600;
     cursor: pointer;
+    margin-top: 0.5rem;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .login-btn:hover {
-    background-color: #ffffff;
-    color: #ffd000;
-    transition: 0.3s;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(245, 158, 11, 0.35);
 }

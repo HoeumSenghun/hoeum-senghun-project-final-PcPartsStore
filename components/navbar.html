@@ -1,32 +1,38 @@
-<nav class="navbar navbar-expand-lg sticky-top">
-  <a class="navbar-brand" href="index.html">
-    <img src="../img/pc-part-store.png" style="height: 45px; margin-right: 10px;">
-    <span>PC Parts Store</span>
-  </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
-    aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a class="nav-link text-white" href="index.html">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-white" href="build.html">Build</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-white" href="products.html">Products</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-white" href="guide.html">Guide</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-white" href="contact.html">Contact</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-white" href="about.html">About</a>
-      </li>
-    </ul>
+<nav class="navbar navbar-expand-lg site-navbar" id="siteNavbar">
+  <div class="nav-inner container-fluid">
+    <a class="navbar-brand" href="index.html">
+      <img src="img/pc-part-store.png" alt="PC Parts Store" class="nav-logo">
+      <span class="brand-text">PC<span class="brand-accent">Parts</span>Store</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html" data-page="index">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="build.html" data-page="build">Build</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="products.html" data-page="products">Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="guide.html" data-page="guide">Guides</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html" data-page="about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html" data-page="contact">Contact</a>
+        </li>
+      </ul>
+      <div class="nav-actions">
+        <a href="components/loginPage.html" class="nav-link nav-login">Log In</a>
+        <a href="build.html" class="btn btn-nav-cta">Start Building</a>
+      </div>
+    </div>
   </div>
 </nav>

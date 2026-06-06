@@ -4,20 +4,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products</title>
+    <title>PC Parts Store</title>
     <link rel="icon" href="./img/pc-part-store.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
 
-    <!-- Navbar -->
-    <div w3-include-html="components/navbar.html"></div>
+  <div w3-include-html="components/navbar.html"></div>
 
-    <section class="container-fluid p-0">
-        <h2 class="product text-center">CPUs</h2>
-        <div class="row">
+  <section class="container-fluid p-0">
+    <div class="page-header">
+      <h1>PC Components</h1>
+      <p class="section-intro">Browse all parts by category — CPU, GPU, RAM, storage, and more.</p>
+    </div>
+  </section>
+
+  <div class="products-page">
+    <nav class="category-nav">
+      <div class="category-nav-inner">
+        <a href="#cat-cpu" class="category-btn active"><i class="fas fa-microchip"></i> CPU</a>
+        <a href="#cat-cooler" class="category-btn"><i class="fas fa-fan"></i> Cooler</a>
+        <a href="#cat-motherboard" class="category-btn"><i class="fas fa-server"></i> Motherboard</a>
+        <a href="#cat-memory" class="category-btn"><i class="fas fa-memory"></i> Memory</a>
+        <a href="#cat-storage" class="category-btn"><i class="fas fa-hdd"></i> Storage</a>
+        <a href="#cat-gpu" class="category-btn"><i class="fas fa-tv"></i> GPU</a>
+        <a href="#cat-psu" class="category-btn"><i class="fas fa-bolt"></i> PSU</a>
+        <a href="#cat-case" class="category-btn"><i class="fas fa-box"></i> Case</a>
+      </div>
+    </nav>
+
+    <section id="cat-cpu" class="product-category">
+      <div class="category-header">
+        <div class="category-header-icon"><i class="fas fa-microchip"></i></div>
+        <div>
+          <h2>CPUs</h2>
+          <span>Processors for gaming, work, and everyday use</span>
+        </div>
+      </div>
             <div class="product-list-container">
                 <table>
                     <thead>
@@ -78,11 +104,17 @@
                     </tbody>
                 </table>
             </div>
-        </div>
+    </section>
 
-        <h2 class="product text-center">CPU Coolers</h2>
-        <div class="row">
-            <div class="product-list-container">
+    <section id="cat-cooler" class="product-category">
+      <div class="category-header">
+        <div class="category-header-icon"><i class="fas fa-fan"></i></div>
+        <div>
+          <h2>CPU Coolers</h2>
+          <span>Air and AIO liquid coolers</span>
+        </div>
+      </div>
+      <div class="product-list-container">
                 <table>
                     <thead>
                         <tr>
@@ -133,11 +165,17 @@
                     </tbody>
                 </table>
             </div>
-        </div>
+    </section>
 
-        <h2 class="product text-center">Motherboards</h2>
-        <div class="row">
-            <div class="product-list-container">
+    <section id="cat-motherboard" class="product-category">
+      <div class="category-header">
+        <div class="category-header-icon"><i class="fas fa-server"></i></div>
+        <div>
+          <h2>Motherboards</h2>
+          <span>ATX, Micro-ATX, and Mini-ITX boards</span>
+        </div>
+      </div>
+      <div class="product-list-container">
                 <table>
                     <thead>
                         <tr>
@@ -192,11 +230,17 @@
                     </tbody>
                 </table>
             </div>
-        </div>
+    </section>
 
-        <h2 class="product text-center">Memory</h2>
-        <div class="row">
-            <div class="product-list-container">
+    <section id="cat-memory" class="product-category">
+      <div class="category-header">
+        <div class="category-header-icon"><i class="fas fa-memory"></i></div>
+        <div>
+          <h2>Memory (RAM)</h2>
+          <span>DDR4 and DDR5 kits</span>
+        </div>
+      </div>
+      <div class="product-list-container">
                 <table>
                     <thead>
                         <tr>
@@ -251,11 +295,17 @@
                     </tbody>
                 </table>
             </div>
-        </div>
+    </section>
 
-        <h2 class="product text-center">Storage</h2>
-        <div class="row">
-            <div class="product-list-container">
+    <section id="cat-storage" class="product-category">
+      <div class="category-header">
+        <div class="category-header-icon"><i class="fas fa-hdd"></i></div>
+        <div>
+          <h2>Storage</h2>
+          <span>SSDs and hard drives</span>
+        </div>
+      </div>
+      <div class="product-list-container">
                 <table>
                     <thead>
                         <tr>
@@ -306,11 +356,17 @@
                     </tbody>
                 </table>
             </div>
-        </div>
+    </section>
 
-        <h2 class="product text-center">Video Cards</h2>
-        <div class="row">
-            <div class="product-list-container">
+    <section id="cat-gpu" class="product-category">
+      <div class="category-header">
+        <div class="category-header-icon"><i class="fas fa-tv"></i></div>
+        <div>
+          <h2>Video Cards (GPU)</h2>
+          <span>NVIDIA and AMD graphics cards</span>
+        </div>
+      </div>
+      <div class="product-list-container">
                 <table>
                     <thead>
                         <tr>
@@ -366,11 +422,17 @@
                     </tbody>
                 </table>
             </div>
-        </div>
+    </section>
 
-        <h2 class="product text-center">Power Supply</h2>
-        <div class="row">
-            <div class="product-list-container">
+    <section id="cat-psu" class="product-category">
+      <div class="category-header">
+        <div class="category-header-icon"><i class="fas fa-bolt"></i></div>
+        <div>
+          <h2>Power Supply (PSU)</h2>
+          <span>Reliable power for your build</span>
+        </div>
+      </div>
+      <div class="product-list-container">
                 <table>
                     <thead>
                         <tr>
@@ -421,11 +483,17 @@
                     </tbody>
                 </table>
             </div>
-        </div>
+    </section>
 
-        <h2 class="product text-center">Case</h2>
-        <div class="row">
-            <div class="product-list-container">
+    <section id="cat-case" class="product-category">
+      <div class="category-header">
+        <div class="category-header-icon"><i class="fas fa-box"></i></div>
+        <div>
+          <h2>Cases</h2>
+          <span>Mid-tower, full-tower, and compact cases</span>
+        </div>
+      </div>
+      <div class="product-list-container">
                 <table>
                     <thead>
                         <tr>
@@ -476,31 +544,17 @@
                     </tbody>
                 </table>
             </div>
-        </div>
-        </div>
     </section>
+  </div>
 
-    
-        
-    </section>
- 
+  <div w3-include-html="components/footer.html"></div>
 
-</body>
-
-</html>
-
-
-<!-- Footer -->
-<div w3-include-html="components/footer.html"></div>
-
-
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script src="js/script.js"></script>
-<script>
-    includeHTML();
-</script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/products.js"></script>
+  <script>includeHTML();</script>
 </body>
 
 </html>

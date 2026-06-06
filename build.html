@@ -1,197 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Build Your PC</title>
-    <link rel="icon" href="./img/pc-part-store.png">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <style>
-        .table-container {
-          margin: 20px;
-          padding: 20px;
-          border-radius: 5px;
-          background-color: white;
-        }
-  
-        .table-container table,
-        th,
-        td {
-          border: 1px solid black;
-        }
-  
-        .table-container table {
-          width: 100%;
-          border-collapse: collapse;
-          color: red;
-        }
-  
-        .table-container th {
-          height: 30px;
-        }
-  
-        .table-container td {
-          text-align: center;
-        }
-  
-        .button-edit {
-          background-color: green;
-          color: white;
-          border: 0px;
-          border-radius: 3px;
-        }
-  
-        .button-edit:hover {
-          background-color: greenyellow;
-        }
-  
-        .button-delete {
-          background-color: red;
-          color: white;
-          border: 0px;
-          border-radius: 3px;
-        }
-  
-        .button-delete:hover {
-          background-color: tomato;
-        }
-  
-        .table-container form {
-          border: 1px solid gray;
-          padding: 10px;
-          background-color: rgb(255, 187, 0);
-        }
-  
-        .table-container input {
-          width: 100%;
-        }
-      </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PC Parts Store</title>
+  <link rel="icon" href="./img/pc-part-store.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body class="build-page">
 
-    <!-- Navbar -->
-    <div w3-include-html="components/navbar.html"></div>
+  <div w3-include-html="components/navbar.html"></div>
 
-    <section class="container-fluid p-0 ">
-        <div class=" bg-dark"><h2 class="chose-part text-center">Choose Your Parts</h2></div>
-        <!-- Add build components UI here -->
-        <div class="container-b">
-            <form id="pc-builder-form">
-                <!-- CPU -->
-                <div class="component">
-                    <label for="cpu">CPU</label>
-                    <button class="btn-warning" type="button" id="choose-cpu">+ Choose A CPU</button>
-                    <select id="cpu" name="cpu" class="hidden">
-                        <option value="intel-i5">Intel i5</option>
-                        <option value="intel-i7">Intel i7</option>
-                        <option value="amd-ryzen-5">AMD Ryzen 5</option>
-                        <option value="amd-ryzen-7">AMD Ryzen 7</option>
-                    </select>
-                </div>
-                <!-- CPU Cooler -->
-                <div class="component">
-                    <label for="cpu-cooler">CPU Cooler</label>
-                    <button class="btn-warning" type="button" id="choose-cpu-cooler">+ Choose A CPU Cooler</button>
-                    <select id="cpu-cooler" name="cpu-cooler" class="hidden">
-                        <option value="cooler-master">Cooler Master</option>
-                        <option value="noctua">Noctua</option>
-                        <option value="corsair">Corsair</option>
-                    </select>
-                </div>
-                <!-- Motherboard -->
-                <div class="component">
-                    <label for="motherboard">Motherboard</label>
-                    <button class="btn-warning" type="button" id="choose-motherboard">+ Choose A Motherboard</button>
-                    <select id="motherboard" name="motherboard" class="hidden">
-                        <option value="asus-rog">ASUS ROG</option>
-                        <option value="msi-tomahawk">MSI Tomahawk</option>
-                        <option value="gigabyte-aorus">Gigabyte AORUS</option>
-                    </select>
-                </div>
-                <!-- Memory -->
-            <div class="component">
-                <label for="memory">Memory</label>
-                <button class="btn-warning" type="button" id="choose-memory">+ Choose Memory</button>
-                <select id="memory" name="memory" class="hidden">
-                    <option value="corsair-16gb">Corsair 16GB</option>
-                    <option value="gskill-16gb">G.Skill 16GB</option>
-                    <option value="kingston-32gb">Kingston 32GB</option>
-                </select>
-            </div>
-            <!-- Storage -->
-            <div class="component">
-                <label for="storage">Storage</label>
-                <button class="btn-warning" type="button" id="choose-storage">+ Choose Storage</button>
-                <select id="storage" name="storage" class="hidden">
-                    <option value="samsung-1tb">Samsung 1TB SSD</option>
-                    <option value="wd-1tb">Western Digital 1TB HDD</option>
-                    <option value="seagate-2tb">Seagate 2TB HDD</option>
-                </select>
-            </div>
-            <!-- Video Card -->
-            <div class="component">
-                <label for="video-card">Video Card</label>
-                <button class="btn-warning" type="button" id="choose-video-card">+ Choose A Video Card</button>
-                <select id="video-card" name="video-card" class="hidden">
-                    <option value="nvidia-rtx-3060">NVIDIA RTX 3060</option>
-                    <option value="nvidia-rtx-3080">NVIDIA RTX 3080</option>
-                    <option value="amd-rx-6700xt">AMD RX 6700 XT</option>
-                </select>
-            </div>
-            <!-- Case -->
-            <div class="component">
-                <label for="case">Case</label>
-                <button class="btn-warning" type="button" id="choose-case">+ Choose A Case</button>
-                <select id="case" name="case" class="hidden">
-                    <option value="nzxt-h510">NZXT H510</option>
-                    <option value="corsair-4000d">Corsair 4000D</option>
-                    <option value="fractal-meshify-c">Fractal Meshify C</option>
-                </select>
-            </div>
-            <!-- Power Supply -->
-            <div class="component">
-                <label for="power-supply">Power Supply</label>
-                <button class="btn-warning" type="button" id="choose-power-supply">+ Choose A Power Supply</button>
-                <select id="power-supply" name="power-supply" class="hidden">
-                    <option value="corsair-650w">Corsair 650W</option>
-                    <option value="evga-750w">EVGA 750W</option>
-                    <option value="seasonic-850w">Seasonic 850W</option>
-                </select>
-            </div>
+  <section class="container-fluid p-0">
+    <div class="page-header">
+      <h2>Choose Your Parts</h2>
+      <p class="section-intro">Pick compatible components and build your dream PC step by step.</p>
+    </div>
+  </section>
 
-
-            </form>
-        </div>
-        <div class=" bg-dark"><h2 class="chose-part text-center">Overview</h2></div>
-    </section>
-    <div class="table-container">
-        <h2>List component</h2>
-        <form>
-            <label>Id</label>
-            <input id="id" /><br />
-            <label>Component</label>
-            <input id="compo" /><br />
-            <label>Selection</label>
-            <input id="selcet_compo" /><br />
-            <label>Shipping</label>
-            <input id="shipping"><br />
-            <label>Price</label>
-            <input id="price" />
-            <br />
-        </form>
-        <table id="table-photo"></table>
+  <div class="build-layout">
+    <!-- Part picker -->
+    <section class="build-picker">
+      <div class="build-picker-head">
+        <span class="section-label">Build list</span>
+        <h3>Select Components</h3>
+        <p>Click each row to choose a part for your build.</p>
       </div>
-      <script src="js/fetch-data.js"></script>
-    <!-- Footer -->
-    <div w3-include-html="components/footer.html"></div>
+      <div class="container-b">
+        <form id="pc-builder-form" class="part-list">
+          <div class="part-row">
+            <div class="part-row-icon"><i class="fas fa-microchip"></i></div>
+            <div class="part-row-body">
+              <label for="cpu">CPU</label>
+              <button class="btn-warning part-choose-btn" type="button" id="choose-cpu"><i class="fas fa-plus"></i> Choose a CPU</button>
+              <select id="cpu" name="cpu" class="hidden part-select">
+                <option value="intel-i5">Intel i5</option>
+                <option value="intel-i7">Intel i7</option>
+                <option value="amd-ryzen-5">AMD Ryzen 5</option>
+                <option value="amd-ryzen-7">AMD Ryzen 7</option>
+              </select>
+            </div>
+          </div>
+          <div class="part-row">
+            <div class="part-row-icon"><i class="fas fa-fan"></i></div>
+            <div class="part-row-body">
+              <label for="cpu-cooler">CPU Cooler</label>
+              <button class="btn-warning part-choose-btn" type="button" id="choose-cpu-cooler"><i class="fas fa-plus"></i> Choose a CPU Cooler</button>
+              <select id="cpu-cooler" name="cpu-cooler" class="hidden part-select">
+                <option value="cooler-master">Cooler Master</option>
+                <option value="noctua">Noctua</option>
+                <option value="corsair">Corsair</option>
+              </select>
+            </div>
+          </div>
+          <div class="part-row">
+            <div class="part-row-icon"><i class="fas fa-server"></i></div>
+            <div class="part-row-body">
+              <label for="motherboard">Motherboard</label>
+              <button class="btn-warning part-choose-btn" type="button" id="choose-motherboard"><i class="fas fa-plus"></i> Choose a Motherboard</button>
+              <select id="motherboard" name="motherboard" class="hidden part-select">
+                <option value="asus-rog">ASUS ROG</option>
+                <option value="msi-tomahawk">MSI Tomahawk</option>
+                <option value="gigabyte-aorus">Gigabyte AORUS</option>
+              </select>
+            </div>
+          </div>
+          <div class="part-row">
+            <div class="part-row-icon"><i class="fas fa-memory"></i></div>
+            <div class="part-row-body">
+              <label for="memory">Memory</label>
+              <button class="btn-warning part-choose-btn" type="button" id="choose-memory"><i class="fas fa-plus"></i> Choose Memory</button>
+              <select id="memory" name="memory" class="hidden part-select">
+                <option value="corsair-16gb">Corsair 16GB</option>
+                <option value="gskill-16gb">G.Skill 16GB</option>
+                <option value="kingston-32gb">Kingston 32GB</option>
+              </select>
+            </div>
+          </div>
+          <div class="part-row">
+            <div class="part-row-icon"><i class="fas fa-hdd"></i></div>
+            <div class="part-row-body">
+              <label for="storage">Storage</label>
+              <button class="btn-warning part-choose-btn" type="button" id="choose-storage"><i class="fas fa-plus"></i> Choose Storage</button>
+              <select id="storage" name="storage" class="hidden part-select">
+                <option value="samsung-1tb">Samsung 1TB SSD</option>
+                <option value="wd-1tb">Western Digital 1TB HDD</option>
+                <option value="seagate-2tb">Seagate 2TB HDD</option>
+              </select>
+            </div>
+          </div>
+          <div class="part-row">
+            <div class="part-row-icon"><i class="fas fa-tv"></i></div>
+            <div class="part-row-body">
+              <label for="video-card">Video Card</label>
+              <button class="btn-warning part-choose-btn" type="button" id="choose-video-card"><i class="fas fa-plus"></i> Choose a Video Card</button>
+              <select id="video-card" name="video-card" class="hidden part-select">
+                <option value="nvidia-rtx-3060">NVIDIA RTX 3060</option>
+                <option value="nvidia-rtx-3080">NVIDIA RTX 3080</option>
+                <option value="amd-rx-6700xt">AMD RX 6700 XT</option>
+              </select>
+            </div>
+          </div>
+          <div class="part-row">
+            <div class="part-row-icon"><i class="fas fa-box"></i></div>
+            <div class="part-row-body">
+              <label for="case">Case</label>
+              <button class="btn-warning part-choose-btn" type="button" id="choose-case"><i class="fas fa-plus"></i> Choose a Case</button>
+              <select id="case" name="case" class="hidden part-select">
+                <option value="nzxt-h510">NZXT H510</option>
+                <option value="corsair-4000d">Corsair 4000D</option>
+                <option value="fractal-meshify-c">Fractal Meshify C</option>
+              </select>
+            </div>
+          </div>
+          <div class="part-row">
+            <div class="part-row-icon"><i class="fas fa-bolt"></i></div>
+            <div class="part-row-body">
+              <label for="power-supply">Power Supply</label>
+              <button class="btn-warning part-choose-btn" type="button" id="choose-power-supply"><i class="fas fa-plus"></i> Choose a Power Supply</button>
+              <select id="power-supply" name="power-supply" class="hidden part-select">
+                <option value="corsair-650w">Corsair 650W</option>
+                <option value="evga-750w">EVGA 750W</option>
+                <option value="seasonic-850w">Seasonic 850W</option>
+              </select>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="js/script.js"></script>
-    <script>
-        includeHTML();
-    </script>
+    <!-- Overview / CRUD -->
+    <section class="build-overview">
+      <div class="page-header build-overview-header">
+        <h2>Overview</h2>
+        <p class="section-intro">Manage components in your build list.</p>
+      </div>
+      <div class="table-container build-table-wrap">
+        <h2 class="build-table-title"><i class="fas fa-list-alt"></i> List Components</h2>
+        <form class="build-crud-form">
+          <div class="build-form-grid">
+            <div class="build-field">
+              <label for="id">ID</label>
+              <input id="id" class="form-control" placeholder="ID" />
+            </div>
+            <div class="build-field">
+              <label for="compo">Component</label>
+              <input id="compo" class="form-control" placeholder="e.g. CPU" />
+            </div>
+            <div class="build-field">
+              <label for="selcet_compo">Selection</label>
+              <input id="selcet_compo" class="form-control" placeholder="Selected part" />
+            </div>
+            <div class="build-field">
+              <label for="shipping">Shipping</label>
+              <input id="shipping" class="form-control" placeholder="e.g. Free" />
+            </div>
+            <div class="build-field">
+              <label for="price">Price</label>
+              <input id="price" class="form-control" placeholder="0.00" />
+            </div>
+          </div>
+        </form>
+        <div class="build-table-scroll">
+          <table id="table-photo"></table>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div w3-include-html="components/footer.html"></div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="js/script.js"></script>
+  <script>includeHTML();</script>
 </body>
 </html>
